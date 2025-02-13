@@ -6,7 +6,17 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "useDefineForClassFields": false,
-    "baseUrl": "src"
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@shared/*": ["src/shared/*"],
+      "@assets/*": ["src/assets/*"],
+      "@layouts/*": ["src/components/layout/*"]
+    },
+    "types": [
+      "node"
+    ]
   },
   "include": ["src"]
 }

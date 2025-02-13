@@ -7,8 +7,18 @@
     <title>BrowserBot web components</title>
 </head>
 <body>
-<header-component name="Pippo">as</header-component>
-<p>This section is not affected by the component styles</p>
-<script type="module" src="src/components/index.ts"></script>
+    <script type="module" src="src/components/index.ts"></script>
+    <script>
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Create a new instance of the layout component
+            const layoutComponent = document.createElement('layout-component');
+            layoutComponent.innerHTML = `
+               <chat-details-component></chat-details-component>
+            `;
+            // Append it to the body
+            document.body.appendChild(layoutComponent); 
+        });
+    </script>
 </body>
 </html>
