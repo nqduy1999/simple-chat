@@ -1,5 +1,3 @@
-module go.mod
+module github.com/nqduy1999/simple-chat
 
 go 1.21.4
-
-require golang.org/x/net v0.35.0 // indirect
