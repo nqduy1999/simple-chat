@@ -1,22 +1,25 @@
 {
-  "name": "butopen-web-components-tailwind-starter-kit",
-  "version": "1.0.1",
+  "private": true,
+  "name": "@acme/monorepo",
   "scripts": {
-    "start": "vite dev --host",
-    "dev": "vite dev --host",
-    "build": "vite build",
-    "lint": "eslint src --fix"
+    "dev": "turbo dev",
+    "dev:chat": "turbo dev --filter=\"{./apps/chat}...\"",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "build": "turbo build",
+    "build:chat": "turbo build --filter=\"...{./apps/chat}\""
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.12",
-    "lit": "^2.4.0",
-    "postcss": "^8.4.18",
-    "sass": "^1.55.0",
-    "tailwindcss": "^3.2.0",
-    "typescript": "^4.8.4",
-    "vite": "^3.1.8"
+    "turbo": "^1.10.7",
+    "typescript": "^4.9.5"
   },
-  "dependencies": {
-    "path": "^0.12.7"
+  "pnpm": {
+    
+  },
+  "prettier": {
+    "printWidth": 100,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "trailingComma": "es5"
   }
 }
